@@ -1,8 +1,5 @@
-// import { SupabaseClient } from '@supabase/supabase-js'
-import React, { useEffect, useState } from 'react'
 import { Create, SimpleForm, TextInput, DateInput, SelectInput, BooleanInput, ReferenceInput } from 'react-admin'
-import { supabaseClient } from '../../utils/supabase'
-
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 
@@ -20,15 +17,15 @@ export default function createTodo() {
           label="Todo's name"
         />
         
-        <ReferenceInput label="Categories" source='category_id' reference='categories'>
+        <ReferenceInput label="Categories" source='category_name' reference='categories'>
           <SelectInput />
         </ReferenceInput>
 
-        <ReferenceInput label="Users" source='user_id' reference='users'>
+        <ReferenceInput label="Users" source='username' reference='users'>
           <SelectInput />
         </ReferenceInput>
 
-        {/* <BooleanInput label="Complete" source="complete" /> */}
+        {/* <BooleanInput label="Complete" source="complete" options={{checkedIcon: <FavoriteIcon/> }} /> */}
         <DateInput label='Create date' source='created_at'/>
         <DateInput label='Date due' source='due_date'/>
         
