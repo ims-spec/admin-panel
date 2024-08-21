@@ -14,7 +14,6 @@ export default function todosList() {
             <TextField source="category_id" />
             <TextField source="user_id" />
             <BooleanField source="complete" TrueIcon={AlarmOnIcon} FalseIcon={AlarmOffIcon} />
-            {/* <Field source="complete" /> */}
             <DateField source="due_date" />
             <DateField source="created_at" />
         </Datagrid>
